@@ -34,14 +34,14 @@
 ### Configurando e executando:
 
 ```
+npm install
 npm run dev
 ```
 
-### Importação de CSV básico:
+### Executando os testes:
 
 ```
-npm install
-npm run csv
+npm run test
 ```
 
 ### 📝 Licença
