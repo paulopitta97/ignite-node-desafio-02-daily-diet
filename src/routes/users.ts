@@ -26,9 +26,9 @@ export async function usersRoutes(app: FastifyInstance) {
         })
         .first()
       if (user) {
-        throw new Error(
-          `User with this session ID [${sessionId}] already exists.`,
-        )
+        return reply.status(403).send({
+          error: `User with this session ID already exists and is connected.`,
+        })
       }
     }
 
