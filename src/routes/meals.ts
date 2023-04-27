@@ -253,7 +253,7 @@ export async function mealsRoutes(app: FastifyInstance) {
       const updateMealBodySchema = z.object({
         name: z.string(),
         description: z.string().optional(),
-        createdAt: z.string().datetime(),
+        createdAt: z.string(),
         belongsDiet: z.boolean().default(false),
       })
 
