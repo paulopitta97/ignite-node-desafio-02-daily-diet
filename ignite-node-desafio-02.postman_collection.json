@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "6ee723c4-a04f-48ae-9fe3-9df32f0a3964",
+		"name": "ignite-node-desafio-02",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27038131"
+	},
+	"item": [
+		{
+			"name": "Meals",
+			"item": [
+				{
+					"name": "CREATE Meal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"X Tudo\",\r\n    \"description\": \"Lanche X Tudo\",\r\n    \"belongsDiet\": true,\r\n    \"createdAt\": \"2023-04-26 21:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/meals",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"meals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE Meal",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"X Tudo\",\r\n    \"description\": \"Lanche X Tudo\",\r\n    \"belongsDiet\": true,\r\n    \"createdAt\": \"2023-04-26 21:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/meals/d951061e-16cd-4768-8936-7c1540013df7",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"meals",
+								"d951061e-16cd-4768-8936-7c1540013df7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LIST Meals",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/meals",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"meals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Meal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/meals/d951061e-16cd-4768-8936-7c1540013df7",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"meals",
+								"d951061e-16cd-4768-8936-7c1540013df7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Summary",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/meals/summary",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"meals",
+								"summary"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "CREATE User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Paulo Pitta\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/users",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "localhost:3333",
+			"type": "string"
+		}
+	]
+}
